@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rylo Maximus</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Noto Sans', sans-serif;
+      background: #000;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .embed {
+      background: #111214;
+      border-left: 4px solid #aa00ff;
+      border-radius: 6px;
+      width: 100%;
+      max-width: 440px;
+      padding: 16px 16px 18px 16px;
+      position: relative;
+      box-shadow: 0 0 0 1px #1e1f22;
+    }
+
+    .em-thumb {
+      position: absolute;
+      top: 16px; right: 16px;
+      width: 68px; height: 68px;
+      border-radius: 50%;
+      border: 3px solid #111214;
+      overflow: hidden;
+      background: #1a1b1e;
+    }
+    .em-thumb img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    .em-name {
+      font-size: 16px; font-weight: 800;
+      color: #f2f3f5;
+      margin-bottom: 6px;
+      padding-right: 84px;
+      line-height: 1.2;
+    }
+
+    .status-row {
+      display: flex; align-items: center; gap: 6px;
+      margin-bottom: 10px;
+    }
+    .s-dot {
+      width: 13px; height: 13px; border-radius: 50%;
+      background: #f23f43;
+      flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .s-dot::after {
+      content: '';
+      display: block;
+      width: 6px; height: 2px;
+      background: #fff; border-radius: 2px;
+    }
+    .s-label { font-size: 12px; color: #80848e; font-weight: 600; }
+
+    .em-roles { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 12px; }
+    .role-pill {
+      display: flex; align-items: center; gap: 5px;
+      background: #1a1b1e;
+      border: 1px solid #2e2f34;
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 11.5px; font-weight: 600;
+      color: #b5bac1;
+    }
+    .role-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+
+    .em-about {
+      font-size: 13.5px;
+      color: #b5bac1;
+      line-height: 1.55;
+      margin-bottom: 12px;
+      padding-right: 84px;
+    }
+
+    hr.em-div { border: none; border-top: 1px solid #1e1f22; margin: 10px 0 12px; }
+
+    .links-title {
+      font-size: 10.5px; font-weight: 800;
+      color: #5c5f66;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      margin-bottom: 8px;
+    }
+
+    .em-links { display: flex; flex-direction: column; gap: 5px; }
+    .link-row {
+      display: flex; align-items: center; gap: 10px;
+      padding: 7px 10px;
+      background: #0d0d0e;
+      border: 1px solid #1e1f22;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background .12s, border-color .12s;
+    }
+    .link-row:hover { background: #161718; border-color: #aa00ff40; }
+
+    .link-icon {
+      width: 28px; height: 28px; border-radius: 6px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      overflow: hidden;
+      background: #1a1b1e;
+    }
+    .link-icon img { width: 100%; height: 100%; object-fit: cover; border-radius: 6px; }
+
+    .link-info { display: flex; flex-direction: column; }
+    .link-name   { font-size: 13px; font-weight: 700; color: #dbdee1; }
+    .link-handle { font-size: 11px; color: #5c5f66; }
+    .link-arrow  { margin-left: auto; color: #3f4147; font-size: 14px; transition: color .12s; }
+    .link-row:hover .link-arrow { color: #80848e; }
+
+    .em-footer {
+      display: flex; align-items: center; gap: 6px;
+      margin-top: 14px;
+      padding-top: 10px;
+      border-top: 1px solid #1e1f22;
+    }
+    .em-footer-ico {
+      width: 16px; height: 16px; border-radius: 50%;
+      overflow: hidden; background: #1a1b1e;
+    }
+    .em-footer-ico img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
+    .em-footer-txt { font-size: 11px; color: #3f4147; }
+  </style>
+</head>
+<body>
+
+  <div class="embed">
+
+    <div class="em-thumb">
+      <img src="https://i.ibb.co/ynxzwmKN/8a59a2cd9e122bab0d5b92f89f850bf4.jpg" alt="Rylo Maximus"/>
+    </div>
+
+    <div class="em-name">Rylo Maximus</div>
+
+    <div class="status-row">
+      <div class="s-dot"></div>
+      <span class="s-label">Do Not Disturb</span>
+    </div>
+
+    <div class="em-roles">
+      <div class="role-pill">
+        <div class="role-dot" style="background:#5865f2;"></div>
+        Discord Developer
+      </div>
+      <div class="role-pill">
+        <div class="role-dot" style="background:#ff8000;"></div>
+        Html
+      </div>
+    </div>
+
+    <div class="em-about">learning codes!</div>
+
+    <hr class="em-div"/>
+
+    <div class="links-title">Links</div>
+    <div class="em-links">
+
+      <a class="link-row" href="https://youtube.com/@rylomaximus" target="_blank">
+        <div class="link-icon">
+          <img src="https://i.ibb.co/hRtmYG7x/1384060.png" alt="YouTube"/>
+        </div>
+        <div class="link-info">
+          <span class="link-name">YouTube</span>
+          <span class="link-handle">@rylomaximus</span>
+        </div>
+        <span class="link-arrow">↗</span>
+      </a>
+
+      <a class="link-row" href="https://instagram.com/rylomaximus" target="_blank">
+        <div class="link-icon">
+          <img src="https://i.ibb.co/TMsVbb9c/15713420.png" alt="Instagram"/>
+        </div>
+        <div class="link-info">
+          <span class="link-name">Instagram</span>
+          <span class="link-handle">@rylomaximus</span>
+        </div>
+        <span class="link-arrow">↗</span>
+      </a>
+
+      <a class="link-row" href="https://github.com/rylomaximus" target="_blank">
+        <div class="link-icon">
+          <img src="https://i.ibb.co/B56YMMZn/25657.png" alt="GitHub"/>
+        </div>
+        <div class="link-info">
+          <span class="link-name">GitHub</span>
+          <span class="link-handle">@rylomaximus</span>
+        </div>
+        <span class="link-arrow">↗</span>
+      </a>
+
+      <a class="link-row" href="https://discord.gg/5FWgXtYwET" target="_blank">
+        <div class="link-icon">
+          <img src="https://i.ibb.co/SwJhYLny/15047557.png" alt="Discord"/>
+        </div>
+        <div class="link-info">
+          <span class="link-name">Tangerine Mart</span>
+          <span class="link-handle">discord.gg/5FWgXtYwET</span>
+        </div>
+        <span class="link-arrow">↗</span>
+      </a>
+
+    </div>
+
+    <div class="em-footer">
+      <div class="em-footer-ico">
+        <img src="https://i.ibb.co/ynxzwmKN/8a59a2cd9e122bab0d5b92f89f850bf4.jpg" alt="R"/>
+      </div>
+      <span class="em-footer-txt">Rylo Maximus • 2026</span>
+    </div>
+
+  </div>
+
+</body>
+</html>
+
